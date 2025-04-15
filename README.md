@@ -29,7 +29,7 @@ Perfect for handling HLS (HTTP Live Streaming) content, **m3u8-getpack** provide
     sudo apt install python3
     sudo apt install python3-pip
 ```
-### ✅ Install via pip (Recommended-CLI)
+### ✅ Install via pip from [PyPI](https://pypi.org/project/m3u8-getpack/) (Recommended-CLI)
 
 ```bash
     pip install m3u8-getpack
