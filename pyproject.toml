@@ -5,7 +5,6 @@ description = "A command-line tool for downloading and merging m3u8 .ts video se
 authors = [
     {name = "Fabio Castro Dias"}
 ]
-url = "https://github.com/fabiocastrodias/m3u8-getpack"
 license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.10"
@@ -14,6 +13,9 @@ dependencies = [
     "future>=1.0.0",
     "wget>=3.2"
 ]
+
+[project.urls]
+Homepage = "https://github.com/fabiocastrodias/m3u8-getpack"
 
 [build-system]
 requires = ["setuptools>=61.0"]
