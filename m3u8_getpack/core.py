@@ -6,7 +6,7 @@ from .utils import Args, Stopwatch
 
 
 def core():
-    input_file, output_file, quiet = Args().get()
+    input_file, output_file, quiet, thread_mult = Args().get()
     p_bar = False if quiet else True
     s_bar = False if quiet else True
     fm = Fileman(input_file)
@@ -16,7 +16,7 @@ def core():
     parser = Parser(input_file)
     urls, ext, total_segments = parser.enqueue_urls()
     parser.write_manifest()
-    dl = Downloader(urls, ext, total_segments)
+    dl = Downloader(urls, ext, total_segments, thread_mult)
     dl.start(progress=p_bar)
     vm = Merger(output_file)
     vm.start(spinner=s_bar)
