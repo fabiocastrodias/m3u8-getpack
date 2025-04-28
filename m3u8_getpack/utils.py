@@ -37,7 +37,7 @@ class Args:
                     "--output",
                     type=str,
                     metavar="",
-                    help=("output file path."
+                    help=("output file path. "
                             "Default: same as input, "
                             "with .mp4 extension")
         )
@@ -46,7 +46,18 @@ class Args:
                     "--quiet",
                     action="store_true",
                     help="do not show progress bars")
+        self.parser.add_argument(
+                    "-t",
+                    "--thread-mult",
+                    type=int,
+                    metavar="",
+                    help=("thread multiplier. "
+                            "Default: 128, "
+                            "extreme higher values may "
+                            "cause filesystem bottlenecks, "
+                            "leading to incomplete download fragments")
+        )
 
     def get(self):
         args = self.parser.parse_args()
-        return args.input, args.output, args.quiet
+        return args.input, args.output, args.quiet, args.thread_mult
