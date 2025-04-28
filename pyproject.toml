@@ -1,6 +1,6 @@
 [project]
 name = "m3u8-getpack"
-version = "0.0.2"
+version = "0.0.3"
 description = "A command-line tool for downloading and merging m3u8 .ts video segments into a single MP4 file."
 authors = [
     {name = "Fabio Castro Dias"}
